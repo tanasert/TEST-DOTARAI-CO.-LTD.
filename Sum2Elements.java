@@ -20,9 +20,11 @@ public class Sum2Elements {
 			sum=a;
 
 			for(int i=0;i<A.size();i++) {
-				if(A.indexOf(sum-A.get(i))!=-1) {
-				System.out.println(A.indexOf(A.get(i)) +","+ A.indexOf(sum-A.get(i)));
+				for(int j=i+1;j<A.size();j++) {
+					if((sum-A.get(i))==A.get(j)) {
+				System.out.println(i +","+ j);
 				break;
+					}
 				}
 			}
 			
